@@ -32,3 +32,25 @@ if(form){
         form.reset();
     });
 }
+// Typing Animation
+const text =
+"MCA Student | Web Developer | Learner";
+
+let i = 0;
+
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+    }
+}
+
+typing();
+
+// Dark Mode
+const btn = document.getElementById("themeBtn");
+
+btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
